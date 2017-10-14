@@ -26,6 +26,7 @@ ADD_DEFINITIONS(-DUSE_MYMATH)
 if(USE_MYMATH)
   set(MYMATH_DIR "../MathFunctions")
   include_directories(${MYMATH_DIR})
+  
   set(EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
 endif(USE_MYMATH)
 
@@ -34,8 +35,11 @@ endif(USE_MYMATH)
 add_executable(${PROJECT_NAME} Tutorial.cc)
 target_link_libraries(${PROJECT_NAME} ${EXTRA_LIBS})
 
+# Properties->General->Output Directory
+set_target_properties(${PROJECT_NAME} PROPERTIES
+  RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
 # add the install targets (存在预先定义好的 CMAKE_INSTALL_PREFIX)
 # RUNTIME LIBRARY ARCHIVE
-install (TARGETS ${PROJECT_NAME} DESTINATION bin)
+install (TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
