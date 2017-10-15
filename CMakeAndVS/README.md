@@ -1,0 +1,1 @@
+This example is copy from [CMake-VisualStudio-Example](https://github.com/cognitivewaves/CMake-VisualStudio-Example)
