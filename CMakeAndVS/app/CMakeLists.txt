@@ -9,7 +9,7 @@ include_directories("${PROJECT_SOURCE_DIR}/math/include")
 add_executable (${MODULE_NAME} main.cc)
 
 # Properties->Linker->Input->Additional Dependencies
-target_link_libraries (${MODULE_NAME} math)
+target_link_libraries (${MODULE_NAME} PRIVATE math)
 
 # Creates a folder "executables" and adds target 
 # project (app.vcproj) under it
