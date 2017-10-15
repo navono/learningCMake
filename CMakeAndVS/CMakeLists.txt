@@ -11,7 +11,13 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 # Set compiler flags and options.
 # Here it is setting the Visual Studio warning level to 4
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
+if(MSVC)
+  add_compile_options(/W3 /WX)
+else()
+  add_compile_options(-W -Wall -Werror)
+endif(MSVC)
+
 
 # Command to output information to the console
 # Useful for displaying errors, warnings, and debugging
