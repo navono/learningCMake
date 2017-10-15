@@ -1,1 +1,1 @@
-This example is copy from [CMake-VisualStudio-Example](https://github.com/cognitivewaves/CMake-VisualStudio-Example)
+This example is original copy from [CMake-VisualStudio-Example](https://github.com/cognitivewaves/CMake-VisualStudio-Example), and make some refactory about the header file.
