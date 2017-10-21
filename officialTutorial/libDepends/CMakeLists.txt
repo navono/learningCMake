@@ -21,7 +21,7 @@ include_directories("${PROJECT_BINARY_DIR}")
 option (USE_MYMATH 
   "Use tutorial provided math implementation" ON)
 
-ADD_DEFINITIONS(-DUSE_MYMATH)
+add_definitions(-DUSE_MYMATH)
 # add the MathFunctions library?
 #
 if(USE_MYMATH)
